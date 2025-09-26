@@ -30,8 +30,11 @@ const App = () => {
     setStack([ingredient, ...stack]);
   }
 
-  function removeFromBurger(index) {
-    setStack((prevStack) => prevStack.filter((_, i) => i !== index));
+  function removeFromBurger(ingredientRemove) {
+    console.log(ingredientRemove);
+    setStack((prevStack) =>
+      prevStack.filter((ingredient) => ingredient !== ingredientRemove)
+    );
   }
 
   return (
